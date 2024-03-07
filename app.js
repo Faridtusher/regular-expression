@@ -1,9 +1,11 @@
 const express = require('express');
 const app = express();
-const port = 3000
+require('dotenv').config();
+const port = process.env.PORT || 3001
 const hostname = '127.0.0.1'
+const expressionRoute = require('./router/expression.router')
 
-
+app.use(expressionRoute)
 
 
 // create the home page
